@@ -85,6 +85,10 @@ public abstract class AbstractDevOpsAction extends Recorder {
     private final static String REPORT_URL_PART = "/devops/insights/decisionreport";
     private final static String REPORT_ID_PART = "reportId";
 
+    public AbstractDevOpsAction(){
+        this.LOGGER.addHandler(new SecretsHandler());
+    }
+
     private static Map<String, String> TARGET_API_MAP = ImmutableMap.of(
             "prod", "https://cloud.ibm.com",
             "dev", "https://test.cloud.ibm.com",
