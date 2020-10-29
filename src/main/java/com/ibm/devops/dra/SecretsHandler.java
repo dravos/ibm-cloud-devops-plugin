@@ -1,6 +1,7 @@
 /*
 * Custom handler to filter log messages.
 */
+package com.ibm.devops.dra;
 
 import java.util.logging.LogRecord;
 import java.util.logging.StreamHandler;
